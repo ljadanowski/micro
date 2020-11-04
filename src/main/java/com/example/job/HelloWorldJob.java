@@ -15,10 +15,12 @@ public class HelloWorldJob {
     @Scheduled(fixedDelay = "10s")
     void executeEveryTen() {
         LOG.info("Simple Job every 10 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.info("aaa");
     }
 
     @Scheduled(fixedDelay = "45s", initialDelay = "5s")
     void executeEveryFourtyFive() {
         LOG.info("Simple Job every 45 seconds: {}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date()));
+        LOG.info("bbb");
     }
 }
